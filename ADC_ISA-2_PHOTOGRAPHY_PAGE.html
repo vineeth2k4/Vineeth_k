@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Vineeth Kamath - Photography Portfolio</title>
+    <style>
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        .roboto-thin {
+            font-family: "Roboto", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+        .roboto-light {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+        .roboto-regular {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .roboto-medium {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+        .roboto-bold {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+        .roboto-black {
+            font-family: "Roboto", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+        .roboto-thin-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+        .roboto-light-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+        .roboto-regular-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+        .roboto-medium-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: italic;
+        }
+        .roboto-bold-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+        .roboto-black-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 900;
+            font-style: italic;
+        }
+
+
+
+
+
+        body {
+            font-family:'Lucida Sans';
+            margin: 0;
+            background-color: #0C0E0E;
+            color: #FBF1E1;
+            justify-content: center;
+            align-items: center;
+        }
+        header {
+            padding: 30px 100px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+        }
+        .menu {
+            display: flex;
+            gap: 50px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: #FBF1E1;
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+        .menu a.active {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            color: #FBF1E1;
+        }
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+        .container {
+            max-width: 1440px;
+            margin: 0 100px;
+            padding: 10px;
+        }
+
+
+
+
+        .quote {
+            text-align: center;
+            padding: 80px 20px;
+            font-family: "Times New Roman", Times, serif;
+        }
+        .quote q {
+            font-size: 60px;
+            font-style: normal;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .quote cite {
+            font-size: 18px;
+        }
+
+
+
+
+
+  
+        .gallery {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+          margin: 0 auto;
+        }
+  
+        .gallery__strip__wrapper {
+          width: 100%;
+          background: #0C0E0E;
+          position: relative;
+          overflow: hidden;
+          height: 40vh;
+          margin-bottom: 20px;
+        }
+  
+        .gallery__strip {
+          display: flex;
+          width: 90%;
+          height: 200%;
+          position:absolute;
+        }
+  
+        @media (min-width: 950px) {
+          .gallery__strip.one {
+            animation: 20s move-it linear infinite;
+          }
+          .gallery__strip.three {
+            animation: 35s move-it linear infinite;
+          }
+          .gallery__strip.two {
+            animation: 38s move-it-2 linear infinite;
+          }
+          .gallery__strip.four {
+            animation: 25s move-it-2 linear infinite;
+          }
+          .gallery__strip:hover {
+            animation-play-state: paused;
+          }
+        }
+  
+        .photo {
+          flex: 0 0 25%;
+          position: relative;
+          text-align: center;
+          padding: 1rem;
+        }
+  
+        .photo__image img {
+          height: 35vh;
+          width: auto;
+          max-width: 100%;
+          object-fit: cover;
+          transition: 1s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+          border-radius: 7.5px;
+
+        }
+  
+        .photo:hover .photo__image img {
+          transform: scale(1.15);
+        }
+  
+        @keyframes move-it {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+  
+        @keyframes move-it-2 {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Vineeth Kamath</div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="ADC_ISA-2_ABOUT_PAGE.html">About</a>
+                <a href="ADC_ISA-2_PROJECTS_PAGE.html">Projects</a>
+                <a href="ADC_ISA-2_PHOTOGRAPHY_PAGE.html" class="active">Hobbies</a>
+                <a href="ADC_ISA-2_CONTACT_PAGE.html">Contact</a>
+            </div>
+            <div class="social-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+                <img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20aria-label%3D%22Behance%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22%234175fa%22%20rx%3D%2215%25%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22m346.12%20211.86c-73.376%200-73.471%2073.1-73.471%2073.476%200%200-5.027%2073.191%2073.471%2073.191%200%200%2065.465%203.722%2065.465-50.938h-33.615s1.114%2020.578-30.731%2020.578c0%200-33.616%202.237-33.616-33.244h99.081s10.896-83.063-66.584-83.063zm-32.873%2057.454s4.099-29.427%2033.62-29.427c29.613%200%2029.146%2029.427%2029.146%2029.427h-62.766zm-83.987-18.807s29.146-2.142%2029.146-36.41c0-34.173-23.838-50.938-54.103-50.938h-99.551v191.36h99.542s60.81%201.866%2060.81-56.521c5e-3%200%202.613-47.491-35.844-47.491zm-80.645-53.361h55.684s13.504%200%2013.504%2019.926-7.916%2022.815-16.95%2022.815h-52.238v-42.741zm52.894%20123.39h-52.894v-51.218h55.684s20.211-0.186%2020.116%2026.352c0%2022.353-14.99%2024.68-22.906%2024.866zm103.45-146.1v23.562h78.969v-23.562h-78.969z%22%2F%3E%3C%2Fsvg%3E" alt="Behance">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1200px-LinkedIn_icon.svg.png" alt="LinkedIn">
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="quote">
+            <q>Art is the lie that enables us to realise the truth</q>
+            — Pablo Picasso
+        </div>
+    </main>
+
+
+    <div class="gallery">
+        <div class="gallery__strip__wrapper">
+            <div class="gallery__strip one">
+                <div class="photo">
+                    <div class="photo__image"><img
+                            src="https://i.pinimg.com/474x/77/ca/11/77ca11f664f01f9c62a4918be9626366.jpg"
+                            alt="Kyoto" /></div>
+                    <div class="photo__name"></div>
+                </div>
+
+                <div class="photo">
+                    <div class="photo__image"><img
+                            src="https://i.pinimg.com/474x/4a/97/50/4a97502bb3c3ca05b7907d0c33c4a228.jpg"
+                            alt="Halstatt" /></div>
+                    <div class="photo__name"></div>
+                </div>
+
+                <div class="photo">
+                    <div class="photo__image"><img
+                            src="https://i.pinimg.com/474x/57/1b/bc/571bbcf6d41da53e48c4f0b908c90be8.jpg"
+                            alt="Peru" /></div>
+                    <div class="photo__name"></div>
+                </div>
+
+                <div class="photo">
+                    <div class="photo__image"><img
+                            src="https://i.pinimg.com/736x/c4/41/80/c44180989030b570df4d3490a717dbe0.jpg"
+                            alt="Rio" /></div>
+                    <div class="photo__name"></div>
+                </div>
+
+                <div class="photo">
+                    <div class="photo__image"><img
+                            src="https://i.pinimg.com/474x/57/27/08/572708a4555f25926f5ca4bfa02eea04.jpg"
+                            alt="Rio" /></div>
+                    <div class="photo__name"></div>
+                </div>
+
+                <div class="photo">
+                    <div class="photo__image"><img
+                            src="https://i.pinimg.com/474x/a6/d2/06/a6d206250057b64f5d93aa12fd38c7d2.jpg"
+                            alt="Rio" /></div>
+                    <div class="photo__name"></div>
+                </div>
+
+                <div class="photo">
+                    <div class="photo__image"><img
+                            src="https://i.pinimg.com/474x/ba/29/8f/ba298f6f08faaabb6bd359f2e18d8a21.jpg"
+                            alt="Rio" /></div>
+                    <div class="photo__name"></div>
+                </div>
+
+                <div class="photo">
+                    <div class="photo__image"><img
+                            src="https://i.pinimg.com/474x/16/05/2d/16052de398f79f2dc93498fbe961030a.jpg"
+                            alt="Rio" /></div>
+                    <div class="photo__name"></div>
+                </div>
+
+                <div class="photo">
+                    <div class="photo__image"><img
+                            src="https://i.pinimg.com/474x/16/b1/cf/16b1cf210a81697015eb9e5d64091f60.jpg"
+                            alt="Rio" /></div>
+                    <div class="photo__name"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+                
+           
+
+
+        <main>
+            <div class="quote">
+                <q>Color is Descriptive. Black and white is Interpretive</q>
+                — Elliott Erwitt
+            </div>
+        </main>
+
+
+        <div class="gallery">
+            <div class="gallery__strip__wrapper">
+                <div class="gallery__strip one">
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/17/c6/1f/17c61f2ca7bd1d8e7cd153b82a3c20e0.jpg"
+                                alt="Kyoto" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/9f/49/3e/9f493ecee0a79094633587faca44a072.jpg"
+                                alt="Halstatt" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/e0/2b/cd/e02bcd19892570b492ffc064aa5bc821.jpg"
+                                alt="Peru" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/cd/13/b7/cd13b75d465055760b644c4390b59784.jpg"
+                                alt="Rio" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/736x/e9/ad/de/e9adde41bd1dda1af71f3063070d77a8.jpg"
+                                alt="Rio" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/c0/91/f9/c091f972e95679a0b3edb5e9bcc37457.jpg"
+                                alt="Rio" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/e4/14/6b/e4146b40bc227897248521249e0291a6.jpg"
+                                alt="Rio" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/04/5a/71/045a71e73c2063da14b4f6f4666a20e8.jpg"
+                                alt="Rio" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/06/e8/7e/06e87e3f4beeb2ab96af70c5b685af67.jpg"
+                                alt="Rio" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/91/f6/48/91f648edd71d3907c250267a5fe7798a.jpg"
+                                alt="Rio" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/91/2b/b0/912bb0c4b7157de774ac8f40bfbcfe49.jpg"
+                                alt="Rio" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                </div>
+            </div>
+    
+    
+    
+    
+            <div class="gallery__strip__wrapper">
+                <div class="gallery__strip two">
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/b3/ce/6a/b3ce6a7b0aaa470fa4f95c7439ad951e.jpg"
+                                alt="Italy" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/736x/26/78/ab/2678aba665fc9ba891574c4779254053.jpg"
+                                alt="Osaka" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/4a/21/90/4a219054a6b8c662d216d1b361c0e53c.jpg"
+                                alt="Bali" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/736x/56/72/98/567298ef98da0a8bf9c2f466fa8a1a5e.jpg"
+                                alt="Paris" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/dd/5b/ce/dd5bceb2ecfb7fbb8ff3c0305b8b7d02.jpg"
+                                alt="Paris" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/fd/31/28/fd31286d2eaa17b48498ec7a34367428.jpg"
+                                alt="Paris" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/45/c9/dc/45c9dc7728d79724d8487fb75e7e3172.jpg"
+                                alt="Paris" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/ee/7d/ba/ee7dbaef08cd14aa8ffc130e07b3d8cd.jpg"
+                                alt="Paris" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/17/fc/51/17fc51cbdcd296ad2ca5d9f01678cfea.jpg"
+                                alt="Paris" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/f7/f6/fc/f7f6fcc0851254096b46d6f878dcb5e4.jpg"
+                                alt="Paris" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+                    <div class="photo">
+                        <div class="photo__image"><img
+                                src="https://i.pinimg.com/474x/e3/5a/29/e35a2970c0a899551d6b35be824b9909.jpg"
+                                alt="Paris" /></div>
+                        <div class="photo__name"></div>
+                    </div>
+    
+
+    
+                </div>
+            </div>
+    
+    
+    
+    
+
+            
+        </div>
+
+        
+    </div>
+    <header>
+        <nav>
+            <div class="copyright">© 2024 Vineeth Kamath. All Rights Reserved.</div>
+            <br>
+            <br>    
+            <div class="social-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+                <img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20aria-label%3D%22Behance%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22%234175fa%22%20rx%3D%2215%25%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22m346.12%20211.86c-73.376%200-73.471%2073.1-73.471%2073.476%200%200-5.027%2073.191%2073.471%2073.191%200%200%2065.465%203.722%2065.465-50.938h-33.615s1.114%2020.578-30.731%2020.578c0%200-33.616%202.237-33.616-33.244h99.081s10.896-83.063-66.584-83.063zm-32.873%2057.454s4.099-29.427%2033.62-29.427c29.613%200%2029.146%2029.427%2029.146%2029.427h-62.766zm-83.987-18.807s29.146-2.142%2029.146-36.41c0-34.173-23.838-50.938-54.103-50.938h-99.551v191.36h99.542s60.81%201.866%2060.81-56.521c5e-3%200%202.613-47.491-35.844-47.491zm-80.645-53.361h55.684s13.504%200%2013.504%2019.926-7.916%2022.815-16.95%2022.815h-52.238v-42.741zm52.894%20123.39h-52.894v-51.218h55.684s20.211-0.186%2020.116%2026.352c0%2022.353-14.99%2024.68-22.906%2024.866zm103.45-146.1v23.562h78.969v-23.562h-78.969z%22%2F%3E%3C%2Fsvg%3E" alt="Behance">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1200px-LinkedIn_icon.svg.png" alt="LinkedIn">
+            </div>
+        </nav>
+    </header>
+
+</body>
